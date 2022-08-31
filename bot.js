@@ -62,7 +62,7 @@ class DentaBot extends ActivityHandler {
         this.onMembersAdded(async (context, next) => {
         const membersAdded = context.activity.membersAdded;
         //write a custom greeting
-        const welcomeText = 'Welcome to The Heart and the Brain Clinic';
+        const welcomeText = 'Welcome to the QnA Maker sample! Ask me a question and I will try to answer it.';
         for (let cnt = 0; cnt < membersAdded.length; ++cnt) {
             if (membersAdded[cnt].id !== context.activity.recipient.id) {
                 await context.sendActivity(MessageFactory.text(welcomeText, welcomeText));
